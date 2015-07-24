@@ -4,36 +4,32 @@ import getDate from './index';
 const input = `
 # title
 
-_21 asd qwe_
+21 asd qwe
 
-_21 Dec 2015_
+21 *Dec* 2015
 
-_21 December 2015_
+21 December 2015
 
-_21 December 2015_
-
-_24 **8** 2015_
-
-_21 Декабрь 2015_
+21 Декабрь 2015
 `.trim();
 
-it('should getDate text with "DD MMM YYYY / en"', () => {
+it('should text getDate', () => {
   equal(getDate('DD MMM YYYY', 'en', input).text, '21 Dec 2015');
 });
 
-it('should getDate html with "DD M YYYY / en"', () => {
-  equal(getDate('DD M YYYY', 'en', input).html, '<em>24 <strong>8</strong> 2015</em>');
+it('should html getDate', () => {
+  equal(getDate('DD MMM YYYY', 'en', input).html, '21 <em>Dec</em> 2015');
 });
 
-it('should getDate sortable with "DD MMMM YYYY / en"', () => {
-  equal(getDate('DD MMMM YYYY', 'en', input).sortable, 1450645200000);
+it('should sortable getDate', () => {
+  equal(getDate('DD MMM YYYY', 'en', input).sortable, 1450645200000);
 });
 
-it('should getDate with "DD MMMM YYYY / en"', () => {
+it('should getDate with with other pattern', () => {
   equal(getDate('DD MMMM YYYY', 'en', input).text, '21 December 2015');
 });
 
-it('should throw an error with "DD MM YYYY / en"', () => {
+it('should throw an error if date not found', () => {
   throws(() => {
     getDate('DD MM YYYY', 'en', input);
   }, /Input has no date in given pattern 'DD MM YYYY' and locale 'en'/);
@@ -53,7 +49,6 @@ it('should throw an error with "DD MM YYYY / en"', () => {
 //     at utils_hooks__hooks (/Users/matmuchrapna/projects/get-md-date/node_modules/moment/moment.js:16:29)
 //     at repl:1:1
 //     at REPLServer.defaultEval (repl.js:154:27)
-it.skip('should getDate "DD MMM YYYY / ru"', () => {
-  const options = { pattern: 'DD MMMM YYYY', locale: 'ru' };
-  equal(getDate(options, input).text, '21 Декабря 2015');
+it.skip('should locale getDate', () => {
+  equal(getDate('DD MMMM YYYY', 'ru', input).text, '21 Декабря 2015');
 });
