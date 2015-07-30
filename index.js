@@ -1,5 +1,5 @@
-import { isHeader, isLevel, match, text, html } from 'commonmark-helpers';
-import { partial, partialRight } from 'ramda';
+import { match, text, html } from 'commonmark-helpers';
+import { partial } from 'ramda';
 import trimTag from 'trim-html-tag';
 import moment from 'moment';
 
@@ -8,7 +8,7 @@ const isDate = (pattern, locale, node) =>
 
 const result = node => ({
   text: text(node),
-  html: trimTag('p', html(node)),
+  html: trimTag(html(node)),
   sortable: new Date(text(node)).getTime(),
   node
 });
