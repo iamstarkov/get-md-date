@@ -58,7 +58,7 @@ Momentjs [format][format] for date, e.g. `DD MMMM YYYY`.
 *Required*  
 Type: `String`
 
-One of 83 available in momentjs [locales](i18n), e.g. `en`, `fr` or `ru`.
+One of 83 available in momentjs [locales](i18n), e.g. `en` or `fr`.
 
 [i18n]: http://momentjs.com/docs/#/i18n/
 
