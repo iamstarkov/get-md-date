@@ -1,6 +1,6 @@
 {
   "name": "get-md-date",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "get date from markdown article",
   "main": "index.es5.js",
   "scripts": {
