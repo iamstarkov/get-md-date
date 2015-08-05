@@ -1,5 +1,4 @@
 import { match, text, html } from 'commonmark-helpers';
-import { partial } from 'ramda';
 import trimTag from 'trim-html-tag';
 import moment from 'moment';
 
@@ -7,7 +6,7 @@ const isDate = (format, locale, node) =>
   moment(text(node), format, locale, true).isValid();
 
 export default (format, locale, input) => {
-  const node = match(input, partial(isDate, format, locale));
+  const node = match(input, node => isDate(format, locale, node));
   if (!node) return;
   return {
     text: text(node),
