@@ -32,5 +32,8 @@ it('should get text from getDate with with other format', () =>
 it('should get text from getDate with with other locale', () =>
   equal(getDate('DD MMMM YYYY', 'fr', input).text, '24 Décembre 2015'));
 
-it('should get undefined if date not found', () =>
+it('should get undefined if format is unfound', () =>
   equal(getDate('D M Y', 'en', input), undefined));
+
+it('should get undefined if input is empty', () =>
+  equal(getDate('D M Y', 'en', ''), undefined));
