@@ -35,7 +35,7 @@ getDate('DD MMMM YYYY', 'en', input).text;   // 23 December 2015
 getDate('DD MMMM YYYY', 'fr', input).text;   // 24 Décembre 2015
 getDate('DD MMMM YYYY', 'en', input).moment; // moment instance
 getDate('DD MMMM YYYY', 'en', input).node;   // AST node, see commonmark API
-getDate('D M Y',        'en', input);        // undefined ¯\_(ツ)_/¯
+getDate('DD MMMM YYYY', 'en', '');           // undefined ¯\_(ツ)_/¯
 ```
 
 ## API
