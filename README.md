@@ -67,6 +67,13 @@ Type: `String`
 
 Markdown string.
 
+## Related
+
+* [get-md-content][get-md-content] - get content from markdown article
+* [get-md-desc][get-md-desc] - get description from markdown article
+* [get-md-image][get-md-image] - get image from markdown article
+* [get-md-title][get-md-title] - get title from markdown article
+
 ## License
 
 MIT © [Vladimir Starkov](https://iamstarkov.com)
@@ -82,3 +89,8 @@ MIT © [Vladimir Starkov](https://iamstarkov.com)
 
 [depstat-url]: https://david-dm.org/iamstarkov/get-md-date
 [depstat-image]: https://david-dm.org/iamstarkov/get-md-date.svg?style=flat-square
+
+[get-md-content]: https://github.com/iamstarkov/get-md-content
+[get-md-desc]: https://github.com/iamstarkov/get-md-desc
+[get-md-image]: https://github.com/iamstarkov/get-md-image
+[get-md-title]: https://github.com/iamstarkov/get-md-title
