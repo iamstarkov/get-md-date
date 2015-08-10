@@ -11,8 +11,7 @@ const input = `
 
 23 December 2015
 
-24 Décembre 2015
-`.trim();
+24 Décembre 2015`;
 
 it('should get text from getDate', () =>
   equal(getDate('DD MMM YYYY', 'en', input).text, '22 Dec 2015'));

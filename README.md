@@ -25,8 +25,7 @@ const input = `
 
 23 December 2015
 
-24 Décembre 2015
-`.trim();
+24 Décembre 2015`;
 
 getDate('DD MMM YYYY',  'en', input).text;   // 21 Dec 2015
 getDate('DD MMM YYYY',  'en', input).html;   // 22 <em>Dec</em> 2015
